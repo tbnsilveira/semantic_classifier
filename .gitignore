@@ -1,3 +1,13 @@
+/.gitignore
+.gitignore
+
+# Author's defined ignored files and folders:
+data/
+notebooks/not_public/
+references/
+outputs/
+/semantic_factors.code-workspace
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -77,6 +87,8 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+Intelligence_Factors_v20231013.ipynb
+Semantic_Factors_vMiguel.ipynb
 
 # IPython
 profile_default/
