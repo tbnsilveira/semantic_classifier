@@ -6,7 +6,7 @@ data/
 notebooks/not_public/
 references/
 outputs/
-/semantic_factors.code-workspace
+/semantic_similarity.code-workspace
 /source/semantic_factors.ipynb
 
 # Byte-compiled / optimized / DLL files
