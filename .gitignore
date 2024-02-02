@@ -7,7 +7,6 @@ notebooks/not_public/
 references/
 outputs/
 /semantic_similarity.code-workspace
-/source/semantic_factors.ipynb
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -88,8 +87,6 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-Intelligence_Factors_v20231013.ipynb
-Semantic_Factors_vMiguel.ipynb
 
 # IPython
 profile_default/
