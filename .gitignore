@@ -4,6 +4,7 @@
 # Author's defined ignored files and folders:
 data/
 notebooks/not_public/
+source/not_public/
 references/
 outputs/
 /semantic_similarity.code-workspace
