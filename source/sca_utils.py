@@ -18,7 +18,7 @@ class TextClassifier:
         self.model_regression = load_model(model_regression_path)
 
 
-    def nlp_getVector(self, word, error_warning=False):
+    def nlp_getVector(self, word):
         '''
         Obtains the vector representation of a given word from SpaCy word embedding 'en_use_lg'.
         Usage:  nlp_getVector(word)[0] to get the text; nlp_getVector(word)[1] to get the vector.
@@ -28,11 +28,9 @@ class TextClassifier:
             word_vector = self.nlp_use(word).vector
             word_text = self.nlp_use(word).text
         except:
-            if error_warning:
-                print('Error: word vector not available.')
+            print('Error: word vector not available.')
             return None
         return (word_text, word_vector)
-
 
 
     def similarity_findWords(self, keyword, n=10):
