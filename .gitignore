@@ -8,6 +8,7 @@ source/not_public/
 references/
 outputs/
 /semantic_similarity.code-workspace
+semantic_similarity.code-workspace
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
