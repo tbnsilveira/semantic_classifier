@@ -60,4 +60,12 @@ This project is licensed under the MIT License. The MIT License is a permissive 
 
 
 ## Acknowledgments
-This project builds upon the powerful NLP capabilities provided by SpaCy and its word embeddings, enabling a deeper dive into the semantic relationships between words.
+This project builds upon the powerful NLP capabilities provided by SpaCy and its word embeddings, enabling a deeper dive into the semantic relationships between words. 
+
+This project is part of the Ph.D. thesis of Tiago B. N. Silveira.  
+UTFPR, Brazil. 2023-12.  
+
+## Cite this repository
+If you use this software in your work, please cite it using the following metadata:
+
+Da Silveira, T. B. N. (2023). Semantic Similarity (Version 1.0.0) [Computer software]
