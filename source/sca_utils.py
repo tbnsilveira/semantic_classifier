@@ -121,3 +121,42 @@ class TextClassifier:
         print(f'--- {word}:\n{result[0][0]*100:.2f} of objectivity\n{result[0][1]*100:.2f} of subjectivity')
         #print(f'Model used: {self.model_regression.name}')  # Print the name of the model
         return
+    
+
+    def textClassifier_getSCA_regression(self, word):
+        '''
+        Given a word vector, returns the probability for objective and subjective semantic content, respectively.
+        Output: objectivity_probability, subjectivity_probability
+        '''
+        new_entry = self.nlp_getVector(word)
+        if new_entry:
+            vector = new_entry[1]
+            vector = np.expand_dims(vector, axis=0)
+            result = self.model_regression.predict(vector)
+            probObj = result[0][0]
+            probSubj = result[0][1]
+        else:
+            print('Word not existent in database.')
+            return None, None
+        # print(f'--- {word}:\n{result[0][0]*100:.2f} of objectivity\n{result[0][1]*100:.2f} of subjectivity')
+        #print(f'Model used: {self.model_regression.name}')  # Print the name of the model
+        return probObj, probSubj
+
+
+    def textClassifier_getSCA_multiclass(self, text):
+        '''Given a word vector, classifies its content as perceptual, manifest, contextual, or latent, according to SCA.
+        Usage example: textClassifier_getSCA_multiclass(word='trial', model=model_02_C, encoder=encoder_oneHot_C).
+
+        Output: sca_label
+        '''
+        new_entry = self.nlp_getVector(text)
+        if new_entry:
+            vector = self.nlp_getVector(text)[1]
+            vector = np.expand_dims(vector, axis=0)
+            result = self.model_multiclass.predict(vector)
+            decoded_result = self.encoder_multiclass.inverse_transform(result)
+            sca_label = decoded_result[0][0]
+        else:
+            print('Word not existent in database.')
+            return None
+        return sca_label
