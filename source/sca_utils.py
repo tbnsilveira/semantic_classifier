@@ -25,12 +25,11 @@ class TextClassifier:
                 var_text, var_vector = nlp_getVector(word)
         '''
         try:
-            word_vector = self.nlp_use(word).vector
-            word_text = self.nlp_use(word).text
-        except:
-            print('Error: word vector not available.')
+            word_doc = self.nlp_use(word)
+        except Exception as e:
+            print(f'Error: word vector not available for {word} due to:\n{e}')
             return None
-        return (word_text, word_vector)
+        return word_doc.text, word_doc.vector
 
 
     def similarity_findWords(self, keyword, n=10):
