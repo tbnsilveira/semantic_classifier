@@ -1,6 +1,6 @@
-# Semantic Similarity
+# Semantic Content Classifier
 
-Welcome to the Semantic Similarity Analysis project, where we explore the nuances of language through **objective** and **subjective** categorizations of words, thus extended to sentences and texts. This project centers around the SCA_Utils library, a tool developed to enhance text analysis by leveraging pre-trained SpaCy embeddings and Semantic Content Analysis (SCA).
+Welcome to the Semantic Content Classifier project, where we explore the nuances of language through **objective** and **subjective** categorizations of words, thus extended to sentences and texts. This project centers around the SCA_Utils library, a tool developed to enhance text analysis by leveraging pre-trained SpaCy embeddings and Semantic Content Analysis (SCA).
 
 
 ## Technical Overview
@@ -17,7 +17,7 @@ The SCA_Utils library provides tools for analyzing text for semantic similarity,
 
 ### Quick Start:
 
-1. Install SpaCy and download necessary language models:
+1. Install SpaCy and download the necessary language models:
 
     ```bash
     pip install spacy
